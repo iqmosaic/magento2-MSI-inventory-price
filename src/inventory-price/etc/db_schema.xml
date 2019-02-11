@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+  <table name="inventory_source_item_price" engine="innodb" resource="default" comment="Inventory Source Item Price ">
+    <column xsi:type="varchar" name="sku" nullable="false" comment="Product SKU" length="64" />
+    <column xsi:type="varchar" name="source_code" nullable="false" comment="Product Entity Id" length="255"/>
+    <column xsi:type="decimal" name="price" scale="4" precision="12" unsigned="false" nullable="true"
+            comment="Price Qty"/>
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+      <column name="sku"/>
+      <column name="source_code"/>
+    </constraint>
+    <constraint xsi:type="foreign" referenceId="INVENTORY_SOURCE_ITEM_PRICE_SOURCE_CODE_INVENTORY_SOURCE_SOURCE_CODE"
+                table="inventory_source_item_price" column="source_code" referenceTable="inventory_source"
+                referenceColumn="source_code" onDelete="CASCADE"/>
+    <constraint xsi:type="foreign" referenceId="INVENTORY_SOURCE_ITEM_PRICE_SKU_CATALOG_PRODUCT_ENTITY_SKU"
+                table="inventory_source_item_price" column="sku" referenceTable="catalog_product_entity"
+                referenceColumn="sku" onDelete="CASCADE"/>
+  </table>
+</schema>

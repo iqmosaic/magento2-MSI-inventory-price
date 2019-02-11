@@ -1,0 +1,16 @@
+# Standard composer ignored paths
+composer.phar
+/vendor/
+
+# Standard IDEs ignored paths
+.idea/
+.settings/
+.loadpath
+.metadata
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.project
+.buildpath

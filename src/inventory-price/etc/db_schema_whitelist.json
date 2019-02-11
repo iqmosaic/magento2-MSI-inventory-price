@@ -1,0 +1,14 @@
+{
+    "inventory_source_item_price": {
+        "column": {
+            "sku": true,
+            "source_code": true,
+            "price": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "INV_SOURCE_ITEM_PRICE_SOURCE_CODE_INV_SOURCE_SOURCE_CODE": true,
+            "INVENTORY_SOURCE_ITEM_PRICE_SKU_CATALOG_PRODUCT_ENTITY_SKU": true
+        }
+    }
+}
